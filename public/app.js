@@ -7,6 +7,13 @@ $.getJSON("/articles", function (data) {
     }
 });
 
+$.ajax({
+    url: '/scrape',
+    method: 'GET'
+}).then( data => {
+    console.log(data);
+})
+
 
 // Whenever someone clicks a p tag
 $(document).on("click", "p", function () {
